@@ -1,9 +1,9 @@
 from django.contrib import admin
 from django.urls import path, include
-#from auth_test.main import views
-
+from users import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include ('main.urls')),
-]
+    path('login/', views.login, name='login'),
+    path('register/', views.register, name='register'),
+    ]
